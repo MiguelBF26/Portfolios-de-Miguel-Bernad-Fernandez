@@ -39,9 +39,15 @@
 //*Presentation*/
 #presentation{
     & p{
-        transition: 3s;
+        animation: face 2s ease-in;
     }
 }
-//*slide*/
+@keyframes face{
+    0%{
+        opacity: 0;
+        transform: scaleZ(0);
+    }
+}
+
 
 

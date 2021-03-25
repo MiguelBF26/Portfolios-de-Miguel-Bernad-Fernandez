@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'Bedas-Neue';
+    src: url(police/bebas_neue/BebasNeue-Regular.ttf);
+}
+@font-face{
+    font-family: 'Berkshireswash';
+    src: url(police/berkshire_swash/BerkshireSwash-Regular.ttf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bedas-Neue';
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+ul{
+    list-style-type: none;
+}
+::-webkit-scrollbar{
+    opacity: 0;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    border-radius: 20px;
+}

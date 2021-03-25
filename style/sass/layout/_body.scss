@@ -1,0 +1,114 @@
+#presentation{
+    @include flex-box-column-c;
+    background-color: $color-secondary;
+    z-index: 0;
+    width: 100%;
+    height: 700px;
+    margin-top: 9%;
+    margin-bottom: 5%;
+    & p{
+        @include flex-box-center;
+        box-shadow: 1px 9px 15px grey;
+        background-color: $color-tertiary;
+        color: $color-secondary;
+        margin-top: 3%;
+        margin-left: 20%;
+        font-size: 1.2em;
+        height: 45px;
+    }
+    & .pre-1{
+        width: 55%;
+    }
+    & .pre-2{
+        width: 55%;
+        margin-left: 22%;
+    }
+    & .pre-3{
+        width: 55%;
+        margin-left: 24%;
+    }
+    & .pre-4{
+        width: 55%;
+        margin-left: 26%;
+    }
+    & .pre-5{
+        width: 55%;
+        margin-left: 28%;
+    }
+}
+#competences  ,  #experiencesP , #contacts {
+    @include flex-box-column-c-c;
+    background-color: $color-tertiary;
+    width: 100%;
+    height: 1000px;
+    & h1{
+        color: $color-secondary;
+        font-size: 4em;
+    }
+}
+#etudes , #passionsEtHobbies{
+    @include flex-box-column-c-c;
+    background-color: $color-secondary;
+    width: 100%;
+    height: 1000px;
+    & h1{
+        color:black;
+        font-size: 4em;
+    }
+}
+span{
+    margin-right: 10px
+}
+.competences ,  .experiencesP , .contacts{
+    @include flex-box-column-c-c;
+    background-color: $color-secondary;
+    color: black;
+    width: 50%;
+    height: 50%;
+    font-size: 1.5em;
+}
+.etudes , .passionsEtHobbies{
+    @include flex-box-column-c-c;
+    background-color: $color-primary;
+    box-shadow: 1px 9px 15px grey;
+    color: $color-secondary;
+    width: 50%;
+    height: 50%;
+    font-size: 1.5em;
+
+}
+.competences,  .contacts{
+    & li{ 
+        text-align: center;
+        padding: 10px;
+    }
+}
+.etudes , .experiencesP, .passionsEtHobbies{
+    & li{
+        text-align: center;
+        padding: 5px;
+    }
+}
+.fas.fa-envelope , .fab{
+    margin-right: 5px;
+    font-size: 1.2em;
+    color: black;
+} 
+footer{
+    @include flex-box-column-c-c;
+    background-color: $color-tertiary;
+    width: 100%;
+    & p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 5%;
+        height: 50px;
+        color: black;
+    }
+    & span{
+        font-family: 'Berkshireswash';
+        margin-left: 5px;
+    }
+}

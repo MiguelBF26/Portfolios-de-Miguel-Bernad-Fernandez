@@ -1,0 +1,47 @@
+
+//*navigation*/
+
+.btn1 , .btn5{
+    &:hover{
+            @include flex-box-center;
+            width: 140px;
+            height: 30px;
+            background-color: $color-secondary;
+            padding: 15px;
+            transition: 1s;
+            transform: scale(1.1);
+        }
+}
+.btn2 , .btn4{
+    &:hover{
+        @include flex-box-center;
+        width: 160px;
+        height: 30px;
+        background-color: $color-secondary;
+        padding: 15px;
+        transition: 1s;
+        transform: scale(1.1);
+    }
+}
+.btn3{
+    &:hover{
+        @include flex-box-center;
+        width: 180px;
+        height: 30px;
+        background-color: $color-secondary;
+        padding: 15px;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+}
+
+
+//*Presentation*/
+#presentation{
+    & p{
+        transition: 3s;
+    }
+}
+//*slide*/
+
+

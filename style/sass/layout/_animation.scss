@@ -4,8 +4,6 @@
 .btn1 , .btn5{
     &:hover{
             @include flex-box-center;
-            width: 140px;
-            height: 30px;
             background-color: $color-secondary;
             padding: 15px;
             transition: 1s;
@@ -15,8 +13,6 @@
 .btn2 , .btn4{
     &:hover{
         @include flex-box-center;
-        width: 160px;
-        height: 30px;
         background-color: $color-secondary;
         padding: 15px;
         transition: 1s;
@@ -26,8 +22,6 @@
 .btn3{
     &:hover{
         @include flex-box-center;
-        width: 180px;
-        height: 30px;
         background-color: $color-secondary;
         padding: 15px;
         transition: 0.5s;
@@ -49,5 +43,48 @@
     }
 }
 
+.competences ,  .experiencesP , .contacts{
+    animation: dark 6s infinite;
+}
 
-
+@keyframes dark{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.01);
+        box-shadow: 5px 15px 15px $color-light;
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.01);
+        box-shadow: 5px 15px 15px $color-light;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.etudes , .passionsEtHobbies{
+    animation: light 6s infinite;
+}
+@keyframes light{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.01);
+        box-shadow: 5px 15px 15px $color-light;
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.01);
+        box-shadow: 5px 15px 15px $color-light;
+    }
+    100%{
+        transform: scale(1);
+    }
+}

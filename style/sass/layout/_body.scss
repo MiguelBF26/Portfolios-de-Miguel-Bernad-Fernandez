@@ -63,6 +63,7 @@ span{
     @include flex-box-column-c-c;
     background-color: $color-secondary;
     color: black;
+    border-radius: 20px;
     width: 50%;
     height: 50%;
     font-size: 1.5em;
@@ -70,7 +71,7 @@ span{
 .etudes , .passionsEtHobbies{
     @include flex-box-column-c-c;
     background-color: $color-primary;
-    box-shadow: 1px 9px 15px grey;
+    border-radius: 20px;
     color: $color-secondary;
     width: 50%;
     height: 50%;

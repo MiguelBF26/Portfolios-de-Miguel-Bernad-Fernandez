@@ -20,14 +20,14 @@ header{
     padding: 15px;
 }
 .btn2 , .btn4 {
-    width: 150px;
+    width: 170px;
     height: 30px;
     @include flex-box-center;
     background-color: $color-light;
     padding: 15px;
 }
 .btn3{
-    width: 160px;
+    width: 170px;
     height: 30px;
     @include flex-box-center;
     background-color: $color-light;

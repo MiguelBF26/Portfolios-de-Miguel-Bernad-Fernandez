@@ -1,5 +1,5 @@
 header{
-    z-index: 1;
+    z-index: 0;
     @include flex-box-center;
     background-color: $color-primary;
     position: fixed;
@@ -16,20 +16,19 @@ header{
     width: 140px;
     height: 30px;
     @include flex-box-center;
-    background-color: $color-light;
+   
     padding: 15px;
 }
 .btn2 , .btn4 {
     width: 170px;
     height: 30px;
     @include flex-box-center;
-    background-color: $color-light;
     padding: 15px;
 }
 .btn3{
     width: 170px;
     height: 30px;
     @include flex-box-center;
-    background-color: $color-light;
+    
     padding: 15px;
 }

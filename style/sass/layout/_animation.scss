@@ -1,3 +1,75 @@
+//*loading*/
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary;
+    width: 100%;
+    height: 100%;
+}
+.carrer {
+    width: 30px;
+    height: 30px;
+    border: 4px solid black;
+    animation: loader 2s infinite ease;
+    & .carreplus{
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        width: 100%;
+        background-color: $color-primary;
+        animation: loader-inner 2s infinite ease-in;
+    }       
+}
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+@keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+}
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 5s ease-out;
+} 
 
 //*navigation*/
 
@@ -29,62 +101,3 @@
     }
 }
 
-
-//*Presentation*/
-#presentation{
-    & p{
-        animation: face 2s ease-in;
-    }
-}
-@keyframes face{
-    0%{
-        opacity: 0;
-        transform: scaleZ(0);
-    }
-}
-
-.competences ,  .experiencesP , .contacts{
-    animation: dark 6s infinite;
-}
-
-@keyframes dark{
-    0%{
-        transform: scale(1);
-    }
-    25%{
-        transform: scale(1.01);
-        box-shadow: 5px 15px 15px $color-light;
-    }
-    50%{
-        transform: scale(1);
-    }
-    75%{
-        transform: scale(1.01);
-        box-shadow: 5px 15px 15px $color-light;
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-.etudes , .passionsEtHobbies{
-    animation: light 6s infinite;
-}
-@keyframes light{
-    0%{
-        transform: scale(1);
-    }
-    25%{
-        transform: scale(1.01);
-        box-shadow: 5px 15px 15px $color-light;
-    }
-    50%{
-        transform: scale(1);
-    }
-    75%{
-        transform: scale(1.01);
-        box-shadow: 5px 15px 15px $color-light;
-    }
-    100%{
-        transform: scale(1);
-    }
-}

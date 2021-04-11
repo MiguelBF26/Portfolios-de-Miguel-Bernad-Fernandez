@@ -32,11 +32,11 @@ ul {
 }
 
 header {
-  z-index: 1;
+  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #303030;
+  background-color: #393939;
   position: fixed;
   top: 0;
   width: 100%;
@@ -56,7 +56,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #686868;
   padding: 15px;
 }
 
@@ -66,7 +65,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #686868;
   padding: 15px;
 }
 
@@ -76,14 +74,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #686868;
   padding: 15px;
 }
 
 #presentation {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   background-color: #ffff;
   z-index: 0;
   width: 100%;
@@ -96,85 +93,74 @@ header {
   justify-content: center;
   align-items: center;
   box-shadow: 1px 9px 15px grey;
-  background-color: #393939;
+  background-color: #686868;
   color: #ffff;
   margin-top: 3%;
-  margin-left: 20%;
-  font-size: 1.2em;
-  height: 45px;
+  text-align: center;
+  font-size: 1.8em;
+  width: 50%;
+  height: 80%;
 }
-#presentation .pre-1 {
-  width: 55%;
+
+#btn-git {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 }
-#presentation .pre-2 {
-  width: 55%;
-  margin-left: 22%;
+
+.btn-git {
+  text-align: center;
+  border: black 1px solid;
+  box-shadow: 1px 5px 15px gray;
+  width: 20%;
+  height: 50px;
 }
-#presentation .pre-3 {
-  width: 55%;
-  margin-left: 24%;
-}
-#presentation .pre-4 {
-  width: 55%;
-  margin-left: 26%;
-}
-#presentation .pre-5 {
-  width: 55%;
-  margin-left: 28%;
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 4em;
 }
 
 #competences, #experiencesP, #contacts {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  background-color: #393939;
-  width: 100%;
-  height: 1000px;
-}
-#competences h1, #experiencesP h1, #contacts h1 {
-  color: #ffff;
-  font-size: 4em;
-}
-
-#etudes, #passionsEtHobbies {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #ffff;
   width: 100%;
   height: 1000px;
 }
-#etudes h1, #passionsEtHobbies h1 {
-  color: black;
-  font-size: 4em;
+
+#etudes, #passionsEtHobbies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #ffff;
+  width: 100%;
+  height: 1000px;
+}
+
+.bloc {
+  border: black 1px solid;
+  background-color: #ffff;
+  width: 40%;
+  height: 40%;
+  font-size: 1.5em;
 }
 
 span {
   margin-right: 10px;
 }
 
-.competences, .experiencesP, .contacts {
+.competences, .experiencesP, .contacts, .etudes, .passionsEtHobbies {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffff;
-  color: black;
-  border-radius: 20px;
-  width: 50%;
-  height: 50%;
-  font-size: 1.5em;
-}
-
-.etudes, .passionsEtHobbies {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #303030;
-  border-radius: 20px;
+  background-color: #393939;
   color: #ffff;
   width: 50%;
   height: 50%;
@@ -202,7 +188,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #393939;
+  background-color: #686868;
   width: 100%;
 }
 footer p {
@@ -217,6 +203,69 @@ footer p {
 footer span {
   font-family: "Berkshireswash";
   margin-left: 5px;
+}
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+}
+
+.carrer {
+  width: 30px;
+  height: 30px;
+  border: 4px solid black;
+  animation: loader 2s infinite ease;
+}
+.carrer .carreplus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #393939;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.fondu-out {
+  opacity: 0;
+  transition: opacity 5s ease-out;
 }
 
 .btn1:hover, .btn5:hover {
@@ -249,63 +298,7 @@ footer span {
   transform: scale(1.1);
 }
 
-#presentation p {
-  animation: face 2s ease-in;
-}
-
-@keyframes face {
-  0% {
-    opacity: 0;
-    transform: scaleZ(0);
-  }
-}
-.competences, .experiencesP, .contacts {
-  animation: dark 6s infinite;
-}
-
-@keyframes dark {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.01);
-    box-shadow: 5px 15px 15px #686868;
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.01);
-    box-shadow: 5px 15px 15px #686868;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.etudes, .passionsEtHobbies {
-  animation: light 6s infinite;
-}
-
-@keyframes light {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.01);
-    box-shadow: 5px 15px 15px #686868;
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.01);
-    box-shadow: 5px 15px 15px #686868;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@media screen and (max-width: 768px) and (min-width: 500px) {
+@media screen and (max-width: 768px) {
   .btn1, .btn5 {
     width: 50%;
   }

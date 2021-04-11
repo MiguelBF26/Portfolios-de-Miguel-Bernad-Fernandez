@@ -1,5 +1,7 @@
 #presentation{
-    @include flex-box-column-c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $color-secondary;
     z-index: 0;
     width: 100%;
@@ -7,77 +9,78 @@
     margin-top: 9%;
     margin-bottom: 5%;
     & p{
-        @include flex-box-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         box-shadow: 1px 9px 15px grey;
         background-color: $color-tertiary;
         color: $color-secondary;
         margin-top: 3%;
-        margin-left: 20%;
-        font-size: 1.2em;
-        height: 45px;
+        text-align: center;
+        font-size: 1.8em;
+        width: 50%;
+        height: 80%;
     }
-    & .pre-1{
-        width: 55%;
-    }
-    & .pre-2{
-        width: 55%;
-        margin-left: 22%;
-    }
-    & .pre-3{
-        width: 55%;
-        margin-left: 24%;
-    }
-    & .pre-4{
-        width: 55%;
-        margin-left: 26%;
-    }
-    & .pre-5{
-        width: 55%;
-        margin-left: 28%;
-    }
+}
+#btn-git{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.btn-git{
+    text-align: center;
+    border: black 1px solid;
+    box-shadow: 1px 5px 15px  gray;
+    width: 20%;
+    height: 50px;
+}
+h1{
+    text-align: center;
+    color: black;
+    font-size: 4em;
 }
 #competences  ,  #experiencesP , #contacts {
-    @include flex-box-column-c-c;
-    background-color: $color-tertiary;
-    width: 100%;
-    height: 1000px;
-    & h1{
-        color: $color-secondary;
-        font-size: 4em;
-    }
-}
-#etudes , #passionsEtHobbies{
-    @include flex-box-column-c-c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
     background-color: $color-secondary;
     width: 100%;
     height: 1000px;
-    & h1{
-        color:black;
-        font-size: 4em;
-    }
 }
+
+#etudes , #passionsEtHobbies{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: $color-secondary;
+    width: 100%;
+    height: 1000px;
+}
+
+.bloc{
+    border: black 1px solid;
+    background-color: $color-secondary;
+    width: 40%;
+    height: 40%;
+    font-size: 1.5em;
+}
+
 span{
     margin-right: 10px
 }
-.competences ,  .experiencesP , .contacts{
-    @include flex-box-column-c-c;
-    background-color: $color-secondary;
-    color: black;
-    border-radius: 20px;
-    width: 50%;
-    height: 50%;
-    font-size: 1.5em;
-}
-.etudes , .passionsEtHobbies{
+
+.competences ,  .experiencesP , .contacts , .etudes , .passionsEtHobbies{
     @include flex-box-column-c-c;
     background-color: $color-primary;
-    border-radius: 20px;
     color: $color-secondary;
     width: 50%;
     height: 50%;
     font-size: 1.5em;
-
 }
+
 .competences,  .contacts{
     & li{ 
         text-align: center;

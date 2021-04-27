@@ -2,8 +2,7 @@
 header{
     display: none;
     z-index: 0;
-    
-    background-color: $color-primary;
+    background-color: $color-tertiary;
     position: fixed;
     top: 0;
     width: 100%;
@@ -53,18 +52,18 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $color-secondary;
+    background-color: #f5f5f5;
     z-index: 0;
-    width: 100vw;
+    width: 120vw;
     height: 80vh;
     margin-top: 2vw;
     & p{
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 9px 15px grey;
-        background-color: $color-tertiary;
-        color: $color-secondary;
+        border: 3px solid $color-primary;
+        background-color: $color-primary;
+        color: white;
         margin-top: 3%;
         text-align: center;
         font-size: 1.8em;
@@ -80,8 +79,7 @@ section{
     justify-content: center;
     align-items: center;
     border: black 1px solid;
-    background-color: white;
-    box-shadow: 1px 5px 15px  gray;
+    background-color: #f5f5f5;
     font-size: 15px;
     width: 18vw;
     height: 5vh;
@@ -112,8 +110,9 @@ span{
 
 .competences ,  .experiencesP , .contacts , .etudes , .passionsEtHobbies{
     @include flex-box-column-c-c;
-    background-color: $color-tertiary;
-    color: $color-secondary;
+    background-color: $color-primary;
+    border: 3px solid $color-primary;
+    color: white;
     width: 60vw;
     height: 75vh;
     font-size: 1.5em;
@@ -123,12 +122,12 @@ span{
     justify-content: center;
     flex-direction: column;
     & h1{
-        text-align: center;
         color: black;
         font-size: 4em;
         text-align: center;
-        margin: 0;
+        margin-top: 10vh;
         width: 60vw;
+        height: 10vh;
     }
 }
 .competences,  .contacts{
@@ -137,19 +136,36 @@ span{
         padding: 10px;
     }
 }
-.etudes , .experiencesP, .passionsEtHobbies{
+.etudes , .passionsEtHobbies{
     & li{
         text-align: center;
         padding: 5px;
     }
 }
-.fas.fa-envelope , .fab{
-    margin-right: 5px;
-    font-size: 1.2em;
-    color: black;
-} 
+.experiencesP{
+    & span{
+        text-align: center;
+        margin: 50px , 0px;
+    }
+    & li{
+        text-align: center;
+        padding: 10px;        
+        margin-right: 50px;
+    }
+}
+.contacts{
+    & .fas , .fab{
+        margin-right: 10px;
+        font-size: 1.2em;
+        color: white;
+    } 
+    & a{
+        color: white;
+    }
+}
 
 
+//*Bas de Page */
 footer{
     @include flex-box-column-c-c;
     background-color: $color-tertiary;

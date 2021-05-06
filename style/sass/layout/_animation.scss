@@ -8,8 +8,8 @@
     animation: end 6s both;
     pointer-events: none;
     z-index: 7;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 .carrer {
     width: 30px;
@@ -81,76 +81,68 @@
       opacity: 0;
   }
 }
-
-
-//*Animation navigation*/
-
-.btn1 , .btn5{
+//*Animation Accueil*/
+#bienvenu p{
+  transition: all 1500ms ease-out; 
+}
+#bienvenu{
+  transition: all 1500ms ease-out; 
     &:hover{
-            @include flex-box-center;
-            
-            animation: nav 1000ms ;
-            
-        }
-}
-.btn2 , .btn4{
-    &:hover{
-        @include flex-box-center;
-        
-        animation: nav 1000ms ;
+      transition: 500ms;
+      border: #ff6e40 3px solid ;
+      box-shadow: 1px 5px 15px gray;
+      & h1{
+        transition: 500ms;
+        text-shadow: 5px 5px 20px gray;
+      }
+      & p{
+        transition: 500ms;
+        text-shadow: 5px 5px 20px gray;
+      }
+      
     }
 }
-.btn3{
-    &:hover{
-        @include flex-box-center;
-        
-        animation: nav 5s ;
-    }
+//*Animation "Compétence"*/
+.fab , .fas , .niveaux{
+  transition: all 500ms ease-out;
 }
-@keyframes nav {
-    0%{
-      border-bottom: $color-secondary 0px solid ;
-      border-top: $color-secondary 0px solid ;
-    }
-    100%{
-      border-bottom: $color-secondary 1px solid ;
-      border-top: $color-secondary 1px solid ;
-    }
-}
-
+.competences{
+  transition: all 1500ms ease-out;
+  &:hover{
+    transition: 500ms;
+      box-shadow: 1px 5px 15px gray;
+      border: 5px solid $color-secondary;
+      & .fab , .fas, .niveaux , .support{
+        transition: 500ms;
+        color: #ff6e40;
+      }
+  }
+} 
 //*Animation La Section */
 .competences ,  .experiencesP , .contacts , .etudes , .passionsEtHobbies{
-  & p , span ,li{
-    transition: all 1500ms ease-out;
+  & li{
+    transition: all 500ms ease-out;
   }
 }
-#presentation p , .competences ,  .experiencesP , .contacts , .etudes , .passionsEtHobbies{
-  transition: all 1500ms ease-out;
+#presentation p ,  .experiencesP , .contacts , .etudes , .passionsEtHobbies{
+  transition: all 500ms ease-out;
     &:hover{
       transition: 500ms;
       box-shadow: 1px 5px 15px gray;
-      border: 3px solid $color-secondary;
-      & p{
-        transition: 500ms;
-        color: #ffd600;
-      }
+      border: 5px solid $color-secondary;
       & li{
         transition: 500ms;
-        color: $color-secondary;
-        & span{
-          color: #ffd600;
-          transition: 500ms;
-        }
-        & .fas , .fab , a {
-          color: $color-secondary;
-          transition: 500ms;
-        }
+        color: #ff6e40;
+      }
+      & .fas , .fab , a {
+        transition: 500ms;
+        color: #ff6e40;
+      }
     }
-  }
 }
 
 h1{
-  transition:text-shadow 1s ;
+  transition: all 500ms ease-out;
   &:hover{
     transition: 500ms;
     text-shadow: 10px 5px 15px gray;
@@ -163,13 +155,12 @@ h1{
   }
 }
 //*Animation btn Git-hub*/
-#btn-git{
-  transition: all 1500ms ease-out;
+#btn{
+  transition: all 500ms ease-out;
   &:hover{
-    background-color: $color-primary;
-    color: $color-secondary;
-    border: $color-secondary 1px solid;
+    border: $color-secondary 2px solid;
     box-shadow: 1px 5px 15px gray;
+    text-shadow: 10px 5px 15px gray;
     transition: 500ms; 
   }
 }

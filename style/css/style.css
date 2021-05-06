@@ -7,13 +7,9 @@
   src: url(police/berkshire_swash/BerkshireSwash-Regular.ttf);
 }
 body {
+  font-family: "Bedas-Neue";
   background-color: #f5f5f5;
   margin: 0;
-  padding: 0;
-  font-family: "Bedas-Neue";
-  overflow-y: auto;
-  scroll-snap-type: y proximity;
-  height: 90vh;
 }
 
 a {
@@ -27,9 +23,8 @@ ul {
 
 ::-webkit-scrollbar {
   opacity: 0;
-  width: 10px;
-  height: 10px;
-  margin: 10px;
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -37,45 +32,52 @@ ul {
   border-radius: 20px;
 }
 
-section {
+#accueil {
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  width: 500vw;
-  height: 80vh;
-}
-
-#presentation {
-  display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;
-  width: 110vw;
-  height: 80vh;
-  margin-top: 2vw;
+  text-align: center;
 }
-#presentation p {
+#accueil #sect {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #212121;
-  background-color: #212121;
-  color: white;
-  margin-top: 3%;
-  text-align: center;
-  font-size: 1.8em;
-  width: 50%;
-  height: 80%;
+  flex-direction: column;
+}
+#accueil h1 {
+  font-size: 60px;
+}
+#accueil p {
+  font-size: 30px;
+}
+#accueil #btn {
+  margin-top: 50px;
 }
 
-#btn-git {
+#bienvenu {
+  border: #f5f5f5 3px solid;
+  width: 60vw;
+  height: 60vh;
+  margin-top: 100px;
+}
+
+#portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black 1px solid;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black 2px solid;
   background-color: #f5f5f5;
-  font-size: 15px;
+  font-size: 20px;
   width: 18vw;
   height: 5vh;
   margin-top: 40px;
@@ -84,16 +86,12 @@ section {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 90vw;
-  height: 80vh;
-  margin-top: 2vw;
 }
 
 .bloc {
   border: black 1px solid;
-  width: 40%;
-  height: 40%;
   font-size: 1.5em;
 }
 
@@ -101,36 +99,108 @@ span {
   margin-right: 10px;
 }
 
-.competences, .experiencesP, .contacts, .etudes, .passionsEtHobbies {
+#competences, #experiencesP, #contacts, #etudes, #passionsEtHobbies, #lien {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#competences h1, #experiencesP h1, #contacts h1, #etudes h1, #passionsEtHobbies h1, #lien h1 {
+  color: black;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 10vh;
+  height: 10vh;
+}
+
+#experiencesP, #contacts, #etudes, #passionsEtHobbie, #lien {
+  margin-top: 10vh;
+}
+
+.experiencesP, .contacts, .etudes, .passionsEtHobbies, .lien {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #212121;
-  border: 3px solid #212121;
+  border: 5px solid #212121;
   color: white;
-  width: 60vw;
-  height: 75vh;
+  width: 100vw;
+  height: 65vh;
   font-size: 1.5em;
 }
 
-#competences, #experiencesP, #contacts, #etudes, #passionsEtHobbies {
+.competences {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  background-color: #212121;
+  border: 5px solid #212121;
+  color: white;
+  width: 100vw;
+  height: 70vh;
+  font-size: 1.5em;
 }
-#competences h1, #experiencesP h1, #contacts h1, #etudes h1, #passionsEtHobbies h1 {
-  color: black;
-  font-size: 4em;
+.competences p {
+  margin: 0;
+}
+.competences ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.competences li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.competences .fab {
+  font-size: 40px;
+}
+.competences .niveaux, .competences .support {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #212121;
+}
+.competences .ios {
+  margin-right: 70px;
+}
+.competences .support {
+  font-size: 35px;
+}
+.competences .support .fas.fa-mobile-alt {
+  margin-right: 50px;
+}
+.competences .support .fas.fa-tablet-alt {
+  margin-right: 10px;
+}
+.competences .left {
+  margin-left: 71px;
+}
+.competences .center {
+  margin-left: 50px;
+  margin-right: 20px;
+}
+.competences .right {
   text-align: center;
-  margin-top: 10vh;
-  width: 60vw;
-  height: 10vh;
+}
+.competences .right span {
+  text-align: center;
+  margin-top: 6px;
+}
+.competences .lvl {
+  margin-bottom: 40px;
 }
 
-.competences li, .contacts li {
-  text-align: center;
-  padding: 10px;
+.passionsEtHobbies li {
+  margin-right: 10px;
+}
+.passionsEtHobbies .fas {
+  color: #212121;
+  margin-right: 10px;
 }
 
 .etudes li, .passionsEtHobbies li {
@@ -148,13 +218,41 @@ span {
   margin-right: 50px;
 }
 
+.contacts li {
+  text-align: center;
+  padding: 10px;
+}
 .contacts .fas, .contacts .fab {
   margin-right: 10px;
   font-size: 1.2em;
-  color: white;
+  color: #212121;
 }
 .contacts a {
   color: white;
+}
+
+#presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 65vh;
+  margin-top: 2vw;
+}
+#presentation p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #212121;
+  background-color: #212121;
+  color: white;
+  margin-top: 3%;
+  text-align: center;
+  font-size: 1.8em;
+  width: 100vw;
+  height: 65vh;
 }
 
 footer {
@@ -167,9 +265,9 @@ footer {
 }
 footer p {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   width: 5%;
   height: 50px;
   color: black;
@@ -188,8 +286,8 @@ footer span {
   animation: end 6s both;
   pointer-events: none;
   z-index: 7;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .carrer {
@@ -252,68 +350,67 @@ footer span {
     opacity: 0;
   }
 }
-.btn1:hover, .btn5:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: nav 1000ms;
-}
-
-.btn2:hover, .btn4:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: nav 1000ms;
-}
-
-.btn3:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: nav 5s;
-}
-
-@keyframes nav {
-  0% {
-    border-bottom: #ff6e40 0px solid;
-    border-top: #ff6e40 0px solid;
-  }
-  100% {
-    border-bottom: #ff6e40 1px solid;
-    border-top: #ff6e40 1px solid;
-  }
-}
-.competences p, .competences span, .competences li, .experiencesP p, .experiencesP span, .experiencesP li, .contacts p, .contacts span, .contacts li, .etudes p, .etudes span, .etudes li, .passionsEtHobbies p, .passionsEtHobbies span, .passionsEtHobbies li {
+#bienvenu p {
   transition: all 1500ms ease-out;
 }
 
-#presentation p, .competences, .experiencesP, .contacts, .etudes, .passionsEtHobbies {
+#bienvenu {
   transition: all 1500ms ease-out;
 }
-#presentation p:hover, .competences:hover, .experiencesP:hover, .contacts:hover, .etudes:hover, .passionsEtHobbies:hover {
+#bienvenu:hover {
+  transition: 500ms;
+  border: #ff6e40 3px solid;
+  box-shadow: 1px 5px 15px gray;
+}
+#bienvenu:hover h1 {
+  transition: 500ms;
+  text-shadow: 5px 5px 20px gray;
+}
+#bienvenu:hover p {
+  transition: 500ms;
+  text-shadow: 5px 5px 20px gray;
+}
+
+.fab, .fas, .niveaux {
+  transition: all 500ms ease-out;
+}
+
+.competences {
+  transition: all 1500ms ease-out;
+}
+.competences:hover {
   transition: 500ms;
   box-shadow: 1px 5px 15px gray;
-  border: 3px solid #ff6e40;
+  border: 5px solid #ff6e40;
 }
-#presentation p:hover p, .competences:hover p, .experiencesP:hover p, .contacts:hover p, .etudes:hover p, .passionsEtHobbies:hover p {
-  transition: 500ms;
-  color: #ffd600;
-}
-#presentation p:hover li, .competences:hover li, .experiencesP:hover li, .contacts:hover li, .etudes:hover li, .passionsEtHobbies:hover li {
+.competences:hover .fab, .competences:hover .fas, .competences:hover .niveaux, .competences:hover .support {
   transition: 500ms;
   color: #ff6e40;
 }
-#presentation p:hover li span, .competences:hover li span, .experiencesP:hover li span, .contacts:hover li span, .etudes:hover li span, .passionsEtHobbies:hover li span {
-  color: #ffd600;
-  transition: 500ms;
+
+.competences li, .experiencesP li, .contacts li, .etudes li, .passionsEtHobbies li {
+  transition: all 500ms ease-out;
 }
-#presentation p:hover li .fas, #presentation p:hover li .fab, #presentation p:hover li a, .competences:hover li .fas, .competences:hover li .fab, .competences:hover li a, .experiencesP:hover li .fas, .experiencesP:hover li .fab, .experiencesP:hover li a, .contacts:hover li .fas, .contacts:hover li .fab, .contacts:hover li a, .etudes:hover li .fas, .etudes:hover li .fab, .etudes:hover li a, .passionsEtHobbies:hover li .fas, .passionsEtHobbies:hover li .fab, .passionsEtHobbies:hover li a {
-  color: #ff6e40;
+
+#presentation p, .experiencesP, .contacts, .etudes, .passionsEtHobbies {
+  transition: all 500ms ease-out;
+}
+#presentation p:hover, .experiencesP:hover, .contacts:hover, .etudes:hover, .passionsEtHobbies:hover {
   transition: 500ms;
+  box-shadow: 1px 5px 15px gray;
+  border: 5px solid #ff6e40;
+}
+#presentation p:hover li, .experiencesP:hover li, .contacts:hover li, .etudes:hover li, .passionsEtHobbies:hover li {
+  transition: 500ms;
+  color: #ff6e40;
+}
+#presentation p:hover .fas, #presentation p:hover .fab, #presentation p:hover a, .experiencesP:hover .fas, .experiencesP:hover .fab, .experiencesP:hover a, .contacts:hover .fas, .contacts:hover .fab, .contacts:hover a, .etudes:hover .fas, .etudes:hover .fab, .etudes:hover a, .passionsEtHobbies:hover .fas, .passionsEtHobbies:hover .fab, .passionsEtHobbies:hover a {
+  transition: 500ms;
+  color: #ff6e40;
 }
 
 h1 {
-  transition: text-shadow 1s;
+  transition: all 500ms ease-out;
 }
 h1:hover {
   transition: 500ms;
@@ -325,60 +422,14 @@ h1:hover {
   color: #ff6e40;
 }
 
-#btn-git {
-  transition: all 1500ms ease-out;
+#btn {
+  transition: all 500ms ease-out;
 }
-#btn-git:hover {
-  background-color: #212121;
-  color: #ff6e40;
-  border: #ff6e40 1px solid;
+#btn:hover {
+  border: #ff6e40 2px solid;
   box-shadow: 1px 5px 15px gray;
+  text-shadow: 10px 5px 15px gray;
   transition: 500ms;
-}
-
-@media screen and (min-width: 320px) and (max-width: 500px) {
-  #loading {
-    width: 100%;
-    height: 700px;
-  }
-
-  #presentation {
-    width: 100%;
-    height: 500px;
-    margin: 10px;
-  }
-  #presentation p {
-    font-size: 1em;
-    width: 70%;
-    height: 60%;
-  }
-
-  #btn-git {
-    font-size: 12px;
-    width: 30vw;
-    height: 5vh;
-  }
-
-  section {
-    height: 100%;
-  }
-
-  .container {
-    text-align: center;
-    width: 100%;
-    height: 500px;
-  }
-
-  #competences h1, #experiencesP h1, #contacts h1, #etudes h1, #passionsEtHobbies h1 {
-    font-size: 2.5em;
-  }
-
-  .competences, .experiencesP, .contacts, .etudes, .passionsEtHobbies {
-    margin: 50px, 0px;
-    font-size: 1em;
-    width: 70%;
-    height: 70%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
